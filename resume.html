@@ -1,0 +1,142 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamina Kar · resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+        font-family: 'Inter', sans-serif;
+        background: #faf4f0; color: #2d3a4c; line-height:1.5;
+        min-height:100vh; display:flex; flex-direction:column;
+        }
+        :root {
+        --primary: #b14764; --primary-light: #e598b0; --primary-soft: #fae2e8;
+        --sand: #f7ede7; --deep: #2f4858; --ink: #1e2d3a; --accent: #c97777;
+        --card-bg: rgba(255, 247, 242, 0.8); --glass-border: rgba(210, 160, 150, 0.25);
+        }
+        .navbar {
+        background: rgba(255, 250, 245, 0.85); backdrop-filter: blur(16px);
+        padding: 1.5rem 5rem; display: flex; align-items: center; justify-content: space-between;
+        border-bottom: 1px solid var(--glass-border); position: sticky; top:0; z-index:100;
+        }
+        .logo {
+        font-size: 2.3rem; font-weight: 800;
+        background: linear-gradient(130deg, #b14764, #a55b73); -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; letter-spacing: -0.02em;
+        }
+        .nav-links { display: flex; gap: 4rem; }
+        .nav-links a {
+        text-decoration: none; font-weight: 600; font-size: 1.2rem; color: #4d3e48;
+        padding: 0.5rem 0; border-bottom: 3px solid transparent; transition: 0.15s;
+        }
+        .nav-links a:hover, .nav-links a.active { border-bottom-color: var(--primary); color: var(--primary); }
+        .page-container {
+        max-width: 1400px; width:100%; margin: 3rem auto 4rem; padding: 0 5rem; flex:1;
+        }
+        h2 {
+        font-size: 3.8rem; font-weight: 700; color: #31262f; margin-bottom: 3rem; position: relative;
+        }
+        h2:after {
+        content: ''; display: block; width: 120px; height: 6px;
+        background: linear-gradient(90deg, var(--primary), #dba28b); border-radius: 10px; margin-top: 0.7rem;
+        }
+        .footer {
+        text-align: center; padding: 2.5rem; color: #7e6a73; border-top: 1px solid #eed9d0;
+        background: rgba(250, 240, 235, 0.6); backdrop-filter: blur(8px); font-size: 1.1rem; margin-top: auto;
+        }
+        /* RESUME SECTION — HUGE CARDS */
+        .resume-section {
+        background: rgba(255, 244, 237, 0.7); backdrop-filter: blur(14px);
+        border-radius: 80px; padding: 4rem; margin-bottom: 4rem;
+        border: 1px solid #fad3c9;
+        }
+        .item-header {
+        display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;
+        margin-bottom: 1.5rem;
+        }
+        .item-header h3 { font-size: 3rem; font-weight: 700; color: #382330; }
+        .item-date {
+        background: #ffe4db; padding: 0.8rem 2.5rem; border-radius: 60px;
+        font-weight: 600; font-size: 1.3rem; color: #a14e62;
+        }
+        .item-sub {
+        font-weight: 600; color: #b55067; margin: 0.5rem 0 2rem; font-size: 1.8rem;
+        }
+        .desc-list {
+        list-style: none; margin-top: 2rem;
+        }
+        .desc-list li {
+        display: flex; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 1.5rem;
+        }
+        .desc-list i { color: #b15570; font-size: 1.6rem; width: 2rem; }
+        .project-tech {
+        display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 1.5rem 0 2rem;
+        }
+        .project-tech span {
+        background: #fadad0; padding: 0.6rem 2.2rem; border-radius: 60px;
+        font-weight: 600; font-size: 1.2rem; color: #8a4058;
+        }
+        @media (max-width:1000px){ .navbar{padding:1rem 2.5rem;} .page-container{padding:0 2.5rem;} }
+    </style>
+    </head>
+    <body>
+    <nav class="navbar">
+        <div class="logo">mamina kar</div>
+        <div class="nav-links">
+        <a href="home.html">home</a>
+        <a href="about.html">about</a>
+        <a href="resume.html" class="active">resume</a>
+        <a href="projects.html">projects</a>
+        <a href="contact.html">contact</a>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <h2>Experience</h2>
+
+        <div class="resume-section">
+        <div class="item-header">
+            <h3>trainee analyst</h3>
+            <span class="item-date">sep 2025 – present</span>
+        </div>
+        <div class="item-sub">Akarshika IT Consulting · Balasore, Odisha</div>
+        <ul class="desc-list">
+            <li><i class="fa-regular fa-arrow-right"></i> data migration with SAP S/4HANA & LTMC – accurate enterprise data transfer.</li>
+            <li><i class="fa-regular fa-arrow-right"></i> SQL data validation to reduce errors in test migrations.</li>
+            <li><i class="fa-regular fa-arrow-right"></i> documented business requirements & participated in agile sprints.</li>
+        </ul>
+        </div>
+
+        <div class="resume-section">
+        <h3 style="font-size:3rem; margin-bottom:2.5rem;">projects snapshot</h3>
+        <div class="item-header"><h4>portfolio website</h4><span class="item-date">2025</span></div>
+        <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+        <p style="font-size:1.5rem;">responsive personal portfolio.</p>
+
+        <div style="margin:3rem 0 2rem;" class="item-header"><h4>SQL data analysis</h4><span class="item-date">2025</span></div>
+        <div class="project-tech"><span>SQL</span><span>relational DB</span></div>
+        <p style="font-size:1.5rem;">student management system – CRUD, subqueries, reports.</p>
+
+        <div class="item-header" style="margin-top:3rem;"><h4>SAP migration task</h4><span class="item-date">internship</span></div>
+        <div class="project-tech"><span>SAP S/4HANA</span><span>LTMC</span></div>
+        <p style="font-size:1.5rem;">live migration of 500+ legacy records, field‑level validation.</p>
+        </div>
+
+        <div class="resume-section">
+        <h3 style="font-size:3rem;">📜 certifications & learning</h3>
+        <ul class="desc-list">
+            <li><i class="fa-regular fa-certificate"></i> PGDCA – Post Graduate Diploma in Computer Applications.</li>
+            <li><i class="fa-regular fa-book-open"></i> building full‑stack skills (JS frameworks / back‑end).</li>
+            <li><i class="fa-regular fa-compass"></i> strong interest in mission‑driven engineering.</li>
+        </ul>
+        </div>
+    </div>
+    <footer class="footer"><i class="fa-regular fa-crown"></i> Mamina Kar · resume</footer>
+    </body>
+    </html>

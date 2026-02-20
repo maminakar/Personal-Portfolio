@@ -1,0 +1,122 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamina Kar · projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+        font-family: 'Inter', sans-serif;
+        background: #faf4f0; color: #2d3a4c; line-height:1.5;
+        min-height:100vh; display:flex; flex-direction:column;
+        }
+        :root {
+        --primary: #b14764; --primary-light: #e598b0; --primary-soft: #fae2e8;
+        --sand: #f7ede7; --deep: #2f4858; --ink: #1e2d3a; --accent: #c97777;
+        --card-bg: rgba(255, 247, 242, 0.8); --glass-border: rgba(210, 160, 150, 0.25);
+        }
+        .navbar {
+        background: rgba(255, 250, 245, 0.85); backdrop-filter: blur(16px);
+        padding: 1.5rem 5rem; display: flex; align-items: center; justify-content: space-between;
+        border-bottom: 1px solid var(--glass-border); position: sticky; top:0; z-index:100;
+        }
+        .logo {
+        font-size: 2.3rem; font-weight: 800;
+        background: linear-gradient(130deg, #b14764, #a55b73); -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; letter-spacing: -0.02em;
+        }
+        .nav-links { display: flex; gap: 4rem; }
+        .nav-links a {
+        text-decoration: none; font-weight: 600; font-size: 1.2rem; color: #4d3e48;
+        padding: 0.5rem 0; border-bottom: 3px solid transparent; transition: 0.15s;
+        }
+        .nav-links a:hover, .nav-links a.active { border-bottom-color: var(--primary); color: var(--primary); }
+        .page-container {
+        max-width: 1400px; width:100%; margin: 3rem auto 4rem; padding: 0 5rem; flex:1;
+        }
+        h2 {
+        font-size: 3.8rem; font-weight: 700; color: #31262f; margin-bottom: 3rem; position: relative;
+        }
+        h2:after {
+        content: ''; display: block; width: 120px; height: 6px;
+        background: linear-gradient(90deg, var(--primary), #dba28b); border-radius: 10px; margin-top: 0.7rem;
+        }
+        .footer {
+        text-align: center; padding: 2.5rem; color: #7e6a73; border-top: 1px solid #eed9d0;
+        background: rgba(250, 240, 235, 0.6); backdrop-filter: blur(8px); font-size: 1.1rem; margin-top: auto;
+        }
+        /* PROJECTS GRID — LARGE TILES */
+        .projects-grid {
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; margin: 4rem 0;
+        }
+        .project-card {
+        background: rgba(255, 244, 237, 0.7); backdrop-filter: blur(14px);
+        border-radius: 70px; padding: 4rem 3.5rem; border: 1px solid #fad3c9;
+        transition: 0.25s;
+        }
+        .project-card:hover { transform: scale(1.02); background: rgba(255, 235, 225, 0.8); }
+        .project-card i {
+        font-size: 4rem; background: linear-gradient(135deg, #b14764, #c56e78);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 2rem;
+        }
+        .project-card h3 { font-size: 2.8rem; font-weight: 700; color: #382330; }
+        .project-tech {
+        display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem;
+        }
+        .project-tech span {
+        background: #fadad0; padding: 0.6rem 2rem; border-radius: 60px;
+        font-weight: 600; font-size: 1.2rem; color: #8a4058;
+        }
+        .project-card p { font-size: 1.5rem; color: #4a3f48; margin-top: 1rem; }
+        @media (max-width:1000px){ .projects-grid{grid-template-columns:1fr;} }
+    </style>
+    </head>
+    <body>
+    <nav class="navbar">
+        <div class="logo">mamina kar</div>
+        <div class="nav-links">
+        <a href="home.html">home</a>
+        <a href="about.html">about</a>
+        <a href="resume.html">resume</a>
+        <a href="projects.html" class="active">projects</a>
+        <a href="contact.html">contact</a>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <h2>featured projects</h2>
+        <div class="projects-grid">
+        <div class="project-card">
+            <i class="fa-regular fa-laptop"></i>
+            <h3>personal portfolio</h3>
+            <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+            <p>Fully responsive multi-page portfolio with elegant glassmorphism and smooth navigation. Highlights technical skills and projects.</p>
+        </div>
+        <div class="project-card">
+            <i class="fa-regular fa-table"></i>
+            <h3>SQL data analysis</h3>
+            <div class="project-tech"><span>SQL</span><span>DB design</span></div>
+            <p>Student management system: complex queries, CRUD operations, subqueries, and reporting. Demonstrates strong database skills.</p>
+        </div>
+        <div class="project-card">
+            <i class="fa-regular fa-cloud-arrow-up"></i>
+            <h3>SAP data migration</h3>
+            <div class="project-tech"><span>SAP S/4HANA</span><span>LTMC</span></div>
+            <p>Live migration of 500+ legacy records during internship. Field-level validation and error reduction using SQL analysis.</p>
+        </div>
+        <div class="project-card">
+            <i class="fa-regular fa-code"></i>
+            <h3>front-end practice</h3>
+            <div class="project-tech"><span>JavaScript</span><span>responsive</span></div>
+            <p>Built interactive components and layouts while learning modern JS. Focus on clean UI and cross-browser compatibility.</p>
+        </div>
+        </div>
+    </div>
+    <footer class="footer"><i class="fa-regular fa-crown"></i> Mamina Kar · projects</footer>
+    </body>
+    </html>

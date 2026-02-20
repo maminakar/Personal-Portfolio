@@ -1,0 +1,302 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamina Kar · home</title>
+    <!-- Font Awesome 6 (free) + Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+        font-family: 'Inter', sans-serif;
+        background: #faf4f0;
+        color: #2d3a4c;
+        line-height: 1.5;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        }
+        :root {
+        --primary: #b14764;
+        --primary-light: #e598b0;
+        --primary-soft: #fae2e8;
+        --sand: #f7ede7;
+        --deep: #2f4858;
+        --ink: #1e2d3a;
+        --accent: #c97777;
+        --card-bg: rgba(255, 247, 242, 0.8);
+        --glass-border: rgba(210, 160, 150, 0.25);
+        }
+        .navbar {
+        background: rgba(255, 250, 245, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 1.5rem 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--glass-border);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 8px 25px rgba(140, 90, 80, 0.1);
+        }
+        .logo {
+        font-size: 2.3rem;
+        font-weight: 800;
+        background: linear-gradient(130deg, #b14764, #a55b73);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.02em;
+        }
+        .nav-links {
+        display: flex;
+        gap: 4rem;
+        }
+        .nav-links a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #4d3e48;
+        padding: 0.5rem 0;
+        border-bottom: 3px solid transparent;
+        transition: 0.15s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+        border-bottom-color: var(--primary);
+        color: var(--primary);
+        }
+        .page-container {
+        max-width: 1400px;
+        width: 100%;
+        margin: 3rem auto 4rem;
+        padding: 0 5rem;
+        flex: 1;
+        }
+        h1 {
+        font-size: 5.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+        }
+        h1 .highlight {
+        background: linear-gradient(145deg, #b14764, #c56a82);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+        h2 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #31262f;
+        margin-bottom: 2.5rem;
+        position: relative;
+        }
+        h2:after {
+        content: '';
+        display: block;
+        width: 120px;
+        height: 6px;
+        background: linear-gradient(90deg, var(--primary), #dba28b);
+        border-radius: 10px;
+        margin-top: 0.7rem;
+        }
+        .btn {
+        display: inline-block;
+        background: white;
+        padding: 1.2rem 3.5rem;
+        border-radius: 60px;
+        font-weight: 700;
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: var(--primary);
+        border: 1px solid #f3cfc4;
+        transition: 0.2s;
+        box-shadow: 0 6px 20px rgba(170, 110, 100, 0.1);
+        }
+        .btn-primary {
+        background: var(--primary);
+        color: white;
+        border: none;
+        box-shadow: 0 22px 35px -16px #b14764;
+        }
+        .btn-primary:hover {
+        background: #c15574;
+        transform: translateY(-4px);
+        }
+        .footer {
+        text-align: center;
+        padding: 2.5rem;
+        color: #7e6a73;
+        border-top: 1px solid #eed9d0;
+        background: rgba(250, 240, 235, 0.6);
+        backdrop-filter: blur(8px);
+        font-size: 1.1rem;
+        margin-top: auto;
+        }
+
+        /* HERO SECTION — EXTRA SPACE */
+        .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5rem;
+        margin: 4rem 0 7rem;
+        }
+        .hero-content {
+        flex: 1.3 1 450px;
+        }
+        .hero-badge {
+        background: var(--primary-soft);
+        color: var(--primary);
+        padding: 1rem 2.5rem;
+        border-radius: 60px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        display: inline-block;
+        margin-bottom: 2.5rem;
+        border: 1px solid #f4c2bc;
+        backdrop-filter: blur(4px);
+        }
+        .hero p {
+        font-size: 1.8rem;
+        color: #5b4b55;
+        max-width: 750px;
+        margin: 3rem 0;
+        }
+        .hero-stats {
+        display: flex;
+        gap: 3rem;
+        }
+        .stat-item {
+        background: rgba(255,255,250,0.7);
+        backdrop-filter: blur(4px);
+        padding: 1.2rem 3rem;
+        border-radius: 60px;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: var(--deep);
+        border: 1px solid rgba(210,160,150,0.3);
+        }
+        .hero-image {
+        flex: 1 1 450px;
+        background: radial-gradient(circle at 70% 30%, #ffe3db, #fcdcd2);
+        border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+        padding: 3rem;
+        text-align: center;
+        box-shadow: 50px 50px 60px -30px #ce918e;
+        border: 3px solid rgba(255,255,255,0.7);
+        }
+        .hero-image i {
+        font-size: 18rem;
+        color: #ad5f74;
+        filter: drop-shadow(0 15px 10px #ebc2bc);
+        }
+
+        /* FEATURE CARDS — BIG */
+        .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.5rem;
+        margin: 6rem 0;
+        }
+        .feature-card {
+        background: rgba(255, 246, 240, 0.7);
+        backdrop-filter: blur(10px);
+        padding: 3.5rem 3rem;
+        border-radius: 60px;
+        border: 1px solid #ffe3db;
+        transition: 0.25s;
+        box-shadow: 0 25px 30px -18px #dbb6ae;
+        }
+        .feature-card:hover {
+        transform: scale(1.02);
+        background: rgba(255, 235, 225, 0.8);
+        }
+        .feature-card i {
+        font-size: 4.5rem;
+        background: linear-gradient(135deg, #b14764, #c56e78);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 2rem;
+        }
+        .feature-card h3 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #392d38;
+        margin-bottom: 1.2rem;
+        }
+        .feature-card p {
+        font-size: 1.4rem;
+        color: #4a3f48;
+        }
+        @media (max-width: 1100px) {
+        .navbar { padding: 1.2rem 2.5rem; }
+        .page-container { padding: 0 2.5rem; }
+        h1 { font-size: 4.5rem; }
+        .featured-grid { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+        }
+    </style>
+    </head>
+    <body>
+    <nav class="navbar">
+        <div class="logo">mamina kar</div>
+        <div class="nav-links">
+        <a href="home.html" class="active">home</a>
+        <a href="about.html">about</a>
+        <a href="resume.html">resume</a>
+        <a href="projects.html">projects</a>
+        <a href="contact.html">contact</a>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="hero">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fa-regular fa-star"></i> MCA 2026 · aspiring engineer</span>
+            <h1>crafting <span class="highlight">elegant</span><br>digital experiences</h1>
+            <p>data‑savvy developer · SAP migration · SQL analytics · fast learner with a passion for large‑scale products.</p>
+            <div class="hero-stats">
+            <div class="stat-item"><i class="fa-regular fa-file-lines"></i> 5+ projects</div>
+            <div class="stat-item"><i class="fa-regular fa-database"></i> LTMC / S/4HANA</div>
+            </div>
+            <a href="projects.html" class="btn btn-primary" style="margin-top: 3rem;">view projects <i class="fa-regular fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-image">
+            <i class="fa-regular fa-laptop-code"></i>
+        </div>
+        </div>
+
+        <h2>core strengths</h2>
+        <div class="featured-grid">
+        <div class="feature-card">
+            <i class="fa-regular fa-cloud-arrow-up"></i>
+            <h3>data migration</h3>
+            <p>LTMC, SAP S/4HANA · validated 500+ records in live enterprise environment.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-regular fa-chart-line"></i>
+            <h3>SQL & analytics</h3>
+            <p>complex queries, schema design, integrity checks for client data sets.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-regular fa-window-maximize"></i>
+            <h3>front‑end foundation</h3>
+            <p>HTML5, CSS3, JavaScript — responsive, accessible interfaces.</p>
+        </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <i class="fa-regular fa-crown"></i> Mamina Kar · home
+    </footer>
+    </body>
+    </html>
